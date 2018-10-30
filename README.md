@@ -55,6 +55,23 @@ which is different from the Wikipedia for traditional Chinese ELMo.
 
 ## Usage
 
+### Use it in Docker
+```bash
+docker build -t elmo .
+docker run \
+    --name elmo \
+    --restart=always \
+    --runtime=nvidia \
+    -p 22226:22 \
+    -d \
+    elmo
+```
+
+then you can use ssh to get into the elmo server, and the passoword is "elmo".
+```bash
+ssh -p 22226 root@localhost
+```
+
 
 ### Install the package
 
